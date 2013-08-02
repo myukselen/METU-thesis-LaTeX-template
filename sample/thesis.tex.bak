@@ -1,0 +1,345 @@
+%
+% METU Institute of Natural and Applied Sciences Thesis example 
+%
+% Edited and Commented by Utku Erdoğdu 2012
+%
+% Please read the explanations so that you can customize the document
+%
+% Files needed by this document:
+% metu.cls 
+% metu11.def (if you will use 11pt fonts) 
+% metu12.def (if you will use 12pt fonts)
+% metu10.def (if you will use 10pt fonts)
+%
+% Possible Options Here:
+%
+% oneandhalf, double, single : Line spacing used in the thesis. Default and institute preference is
+% single.
+%
+% 10pt, 11pt, 12pt : Font size Default is 10pt, which is institue choice. 
+% 
+% pntr, pntc, pnbt : Page number position. Options are top center, top right or bottom. Default and
+% institute preference is page numbers at bottom. When page numbers are at the top bottom margins
+% are skewed.
+% 
+% chaproman, chaparabic: Chapter numbering format. Options are roman numbers and arabic numbers.
+% Default is roman, institute prefers arabic
+%
+% tr, eng : Document language. This is useful if you want to translate your thesis into
+% Turkish. Then you give the option tr and use \ifturkish. . .\else. . .\fi  whenever you want 
+% to do something only for Turkish or only for English. Default is eng. 
+% IMPORTANT!! : For official institute documents you should not use this option. 
+% The Turkish format is only supplied for custom translations.
+%
+% ceng,aee,arme.. : You can use the abbreviated form of your department here and there is no further need to
+% define the department name below. If your department name is not among the below list of defined
+% departments, you should use \department and \turkishdepartment macros to define the name of your
+% department.
+%
+% Defined Departments and Abbreviations:
+% --------------------------------------
+% Computer Engineering : ceng
+% Aerospace Engineering : aee
+% Archaeometry : arme
+% Architecture : arch
+% Biochemistry : bch
+% Biology : biol
+% Biomedical Engineering : bme
+% Biotechnology : btec
+% Building Science : bs
+% Cement Engineering : ceme
+% Chemical Engineering : che
+% Chemistry : chem
+% City and Regional Planning : crp
+% City Planning : cp
+% Civil Engineering : ce
+% Computational Design and Fabrication Technologies in Architecture : arcd
+% Computer Education and Instructional Technology : cte
+% Design Research for Interaction : iddi
+% Earthquake Studies : eqs
+% Earth System Science : ess
+% Electrical and Electronics Engineering : ee
+% Engineering Management : em
+% Engineering Sciences : es
+% Environmental Engineering : enve
+% Food Engineering : fde
+% Geodetics - Geographical Information Technologies : ggit
+% Geological Engineering : geoe
+% Hydrosystems Engineering : he
+% Industrial Design : id
+% Industrial Engineering : ie
+% Mathematics : math
+% Mechanical Engineering : mech
+% Metallurgical and Materials Engineering : mete
+% Micro and Nanotechnology : mnt
+% Mining Engineering : mine
+% Operational Research : or
+% Petroleum and Natural Gas Engineering : pete
+% Physics : phys
+% Polymer Science and Technology : pst
+% Regional Planning : rp
+% Restoration : rest
+% Secondary Science and Mathematics Education : ssme
+% Software Engineering : se
+% Statistics : stat
+% Structural Mechanics : st
+% 
+% phd, ms : Degree Received. Ph.D. or M.S. Default is M.S.
+%
+% End of Options
+\documentclass[11pt,oneandhalf,chaparabic,ceng,phd]{metu}
+% You can delete next line If your thesis does not have an appendix
+\usepackage{appendix}
+
+%
+% Use your latex packages here
+
+
+% End of Latex Packages
+%
+% Any personal Latex definition, decleration, etc.
+
+
+% End of personal stuff
+%
+% Personal Information 
+% ----------------------------
+%
+% Please check this part and fill in information about your thesis
+%
+% Name and Surname
+\author{Utku Erdoğdu}
+% Thesis Title English and Turkish
+\title{Efficient Partially Observable Markov Decision Process Based Formulation of Gene Regulatory Network Control Problem}
+\turkishtitle{Gen Ağlarının Kısmi Gözlemlenebilir Markov Süreçleri ile Modellenerek Etkin Olarak Kontrolü}
+% Department : English and Turkish
+%
+% Some of the departments are pre-defined, you need not redeclare them. You can use them by just
+% giving an option to \documentclass. See documentation for options above. If you will define your 
+% department here do not use ``Department'' or ``Bölümü'' words.
+%\department{Computer Engineering}
+%\turkishdepartment{Bilgisayar Mühendisliği}
+%
+%
+% Date : You should indicate the month of your thesis defence in English.
+% Default is this month
+%
+\date{April 2012}
+%
+% Approval Page Details
+% --------------------------
+% For each command you can give the title as optional parameter enclosed in [ ]
+% This also handles the Turkish titles if you're planning to produce Turkish version of the
+% document. If you'll hard code the title, you need to use turkish version of each command after
+% the command itself
+% 
+% prof : Prof. Dr.
+% assocprof : Assoc. Prof. Dr.
+% assistprof : Assist. Prof. Dr.
+% dr : Dr.
+%
+% Director of Institute
+\director[prof]{Canan Özgen}
+% Head of Department
+\headofdept[prof]{Adnan Yazıcı }
+%
+% Supervisor : English and Turkish
+\supervisor[prof]{Faruk Polat}
+% \turkishsupervisor{  } %if you will hard-code the academic title
+%
+% Affiliation of Supervisor in English and possibly in Turkish
+\departmentofsupervisor{Computer Engineering Department, METU}
+% Co Supervisor if Any : English and Turkish
+% You can just delete the next line if you don't have a co-supervisor
+\cosupervisor[prof]{Reda Alhajj}
+% \turkishcosupervisor{Prof. Dr. Reda Alhajj} %if you will hard-code the academic title
+% Affiliation of Co-Supervisor
+% You can just delete the next line if you don't have a co-supervisor
+\departmentofcosupervisor{Computer Science Dept., Univ. of Calgary}
+%
+% Committee Members
+% In general members are sorted according to their academic titles
+%
+% Proffesors (1)
+% Associate Professors (2)
+% Assistant Professors (3)
+% Other (4)
+% 
+% IMPORTANT:  All affiliatons should fit in a single line
+% If affiliation line is broken into two lines you should shorten the affiliation by using 
+% abbrevations or any other means
+%
+% First committee member should be the chair of examining committee
+% Typically the chair is one of the highest ranked committee members
+% Ask your supervisor if you are not sure
+\committeememberi[prof]{Varol Akman}
+\affiliationi{Computer Engineering Department, Bilkent University}
+% Second committee member is always your supervisor
+\committeememberii[prof]{Faruk Polat}
+\affiliationii{Computer Engineering Department, METU}
+% If you are an M.Sc. student and your Co-Supervisor is in your 
+% examination committee, then third committee member is always your co-supervisor
+%
+% IMPORTANT: If you are Ph.D. student your co-supervisor can not be in your 
+% examination committee.
+\committeememberiii[assocprof]{Tolga Can}
+\affiliationiii{Computer Engineering Department, METU}
+% Fourth committee member
+\committeememberiv[assocprof]{Halit Oğuztüzün}
+\affiliationiv{Computer Engineering Department, METU}
+% Fifth committee member
+\committeememberv[assistprof]{Mehmet Tan}
+\affiliationv{Computer Engineering Department, TOBB ETÜ}
+%
+% Keywords : English & Turkish, Comma seperated
+\keywords{Gene Regulatory Networks, Partially Observable Markov Decision Process, Control of GRN, Gene Expression Data, Data Enrichment}
+\anahtarklm{Gen Düzenleyici Ağlar, Kısmi Gözlemlenebilir Markov Karar Süreçleri, GDA'ların Kontrolü, Gen İfade Verisi, Veri Zenginleştirme}
+%
+% Abstract in English
+%
+\abstract{The need to analyze and closely study the gene related mechanisms motivated the research
+	on the modeling and control of gene regulatory networks (GRN). Different approaches exist to
+	model GRNs; they are mostly simulated as mathematical models that represent relationships
+	between genes. Though it turns into a more challenging problem, we argue that partial
+	observability would be a more natural and realistic method for handling the control of GRNs.
+	Partial observability is a fundamental aspect of the problem; it is mostly ignored and
+	substituted by the assumption that states of GRN are known precisely, prescribed as full
+	observability. On the other hand, current works addressing partially observability focus on
+	formulating algorithms for the finite horizon GRN control problem. So, in this work we
+	explore the feasibility of realizing the problem in a partially observable setting, mainly
+	with Partially Observable Markov Decision Processes (POMDP). We proposed a POMDP formulation
+	for the infinite horizon version of the problem. Knowing the fact that POMDP problems suffer
+	from the curse of dimensionality, we also proposed a POMDP solution method that
+	automatically decomposes the problem by isolating different unrelated parts of the problem,
+	and then solves the reduced subproblems. We also proposed a method to enrich  gene
+	expression data sets given as input to POMDP control task, because in available data sets
+	there are thousands of genes but only tens or rarely hundreds of samples. The method is
+	based on the idea of generating more than one model using the available data sets, and then
+	sampling data from each of the models and finally filtering the generated samples with the
+	help of metrics that measure compatibility, diversity and coverage of the newly generated
+samples.}
+%
+% Turkish Abstract
+%
+\oz{Genlerin çalışma prensiplerini inceleme gereksinimi gen düzenleyici ağların (GDA) modellenmesi
+	ve kontrolü üzerine bilimsel çalışmalar yapılmasına yol açmıştır. GDA'ları modellemek için
+	değişik yaklaşımlar mevcuttur ve bu yaklaşımların çoğu genler arasındaki ilişkileri
+	matematiksel modeller vasıtasıyla modellemektedir.  Problemi daha zorlaştırmasına rağmen,
+	GDA kontrol problemlerinin daha doğal ve gerçekçi çözülebilmesi için kısmi
+	gözlemlenebilirliğin önerilmesi gerektiğini savunuyoruz.  Kısmi gözlemlenebilirlik bu
+	problemin temel bir bileşeni olmasına rağmen çoğunlukla gözardı edilmiş ve problemin
+	çözümünde GDA'nın tüm durumlarının mükemmel olarak bilinebileceği varsayımı yapılmıştır,
+	yani problem tam gözlemlenebilir kabul edilmiştir. Bir yandan da literatürdeki kısmi
+	gözlemlenebilirliği dikkate alan yöntemler sınırlı adımdan oluşan bir problem tanımı ile GDA
+	kontrol problemini çözen algoritmalar üretmeye çalışmaktadır. Bu çalışmada problemin kısmi
+	gözlemlenebilir bir kurgu ile tanımlanması üzerinde çalışılmakta ve Kısmi Gözlemlenebilir
+	Markov Karar Süreçleri (POMDP) bu kurguda kullanılmaktadır. Bu çalışmada problemin sonsuz
+	adımdan oluşan bir hali problem POMDP modeline uygun bir şekilde tanımlanarak sunulmaktadır.
+	POMDP problemlerinin boyutlardan kaynaklanan problemler yaşamasından dolayı POMDP
+	problemlerin birbirinden bağımsız parçalarını ayırıp problemi otomatik olarak parçalayan ve
+	bu parçaları çözerek problemin çözümünü bulan bir çözüm yaklaşımı da bu çalışmada
+	sunulmuştur. Bu çalışmada ayrıca POMDP kontrol problemine girdi olarak verilen gen ifade
+	verisini zenginleştirmek için de bir metot sunulmaktadır. Gen ifade verilerinde binlerce gen
+	olmasına rağmen genelde onlarca, nadir olarak da yüz mertebesinde örneklem bulunduğundan
+	böyle bir metot gerekli ve faydalıdır. Sunulan metot varolan veri kümesini kullanarak birden
+	fazla model oluşturur; her modelden yeni veri noktaları üretikten sonra üretilen veri
+	noktalarını veri kümesinin uygunluğunu, farklılığını ve genişliğini ölçen metrikler
+yardımıyla filtreyerek kullanıma hazır bir veri kümesi oluşturur.} 
+%
+% Dedication 
+\dedication{\textit{To my grandparents\\\vspace{1cm}Hatice Oruç, İbrahim Oruç, Necibe Erdoğdu,
+Şehmus Erdoğdu}}
+%
+%
+% Acknowledgements   
+\acknowledgments{I would like to thank my supervisor Professor Faruk Polat for his constant support,
+	guidance and friendship. It was a great honor to work with him for the last twelve years and
+	our cooperation influenced my academical and world view highly.  I also would like to thank
+	Professor Reda Alhajj for his support and guidance on my stay at Calgary. While away from my
+	home, he not only supported me on my research but also provided that I feel welcome and
+	personally attended all my needs and problems. He also motivated and influenced me highly in
+	scientific context.
+
+A lot of people influenced and supported this work scientifically and their contribution were most
+valuable for me. Assist. Prof. Mehmet Tan personally supplied a lot of important material for the
+real kick off of this work. His ideas and support made it possible that in a short time I were able
+to build the frame of this work. Members of my thesis committee Professor Varol Akman and Assoc.
+Prof. Halit Oğuztüzün always gave valuable feedback for the progress of this work, and were not
+hesitant to warn me of the shortcomings or risks of my work. Assoc. Prof. Tolga Can also provided
+valuable feedback for the future of this research, which I very appreciate. I would also like to
+thank Assoc. Prof. Douglas J. Demetrick of UofC, our talks about my research not only inspired me
+but also helped me to understand the biological aspects of the work.
+
+This work is also supported by TÜBİTAK-BİDEB PhD scholarship (2211) and TÜBİTAK-ARDEB Scientific and
+Technological Research Project Program (1001) (Project No: \#110E179).
+
+In METU-CENG a lot of colleagues provided feedback or inspiration on this work, some of them were
+Ahmet Saçan, Sertan Girgin, and Utku Şirin. I also would like to thank Göktürk Üçoluk, Meltem Turhan
+Yöndem, Cevat Şener, Onur Tolga Şehitoğlu, Hakkı Toroslu for their friendship and making me feel
+like home at METU-CENG. I also like to thank Professor Müslim Bozyiğit and Professor Adnan Yazıcı
+who provided me comfortable working environment after my research assistantship period. 
+
+I was also lucky to find another home in Calgary, Canada. I'd like to thank Mohammed Alshalalfa, Gao
+Shang, Ian Reinhart and Faraz Rasheed for their contributions and feedbacks on my research. I also
+like to thank Keivan Kianmehr for making me feel welcome there. I would also like to thank Alhajj
+family, who gave me a warm welcome in Calgary. 
+
+My family also provided invaluable support for this work. I would like to thank specially to my
+uncle Zeki Erdoğdu. He always make me feel loved and cared. I am also thankful for all the love and
+support by Sevilay Erdoğdu, Emin-Esra-Dicle-Deniz Erdoğdu, Hülya Oruç, Asiye Erdoğdu, Ahmet Erdoğdu,
+Sebahat-Serhun-Dilhun Ayaydın, Özlem-Metin-İpek Sarıbaş, Aynur-Kenan-Cihan-Berna Baykan.  My father
+Abdulkadir Erdoğdu was not able to see this work completed, however his memory was with me all the
+way to the end.
+
+And there are a lot of people that were with me in these eight years. They defined me, they made me
+who I am, they are true owners of this work. It is not possible to write down why each of them is
+important to me and this work, because it will take more space than the work itself. So I'll just
+give names of some of them; Neslihan Arslan, Selma Süloğlu, Hande Çelikkanat, Ömer Nebil Yaveroğlu,
+Gökdeniz Karadağ, Sinan Kalkan, Burçin Sapaz, Turan Yüksel, Aykut Erdem, Erkut Erdem, Ruken Çakıcı,
+Oğuz Özün, Semra Doğandağ, Burcu Büyükkağnıcı, Ayça Aksu, Mehmet Ersan Topaloğlu, Servet Kızıltaş,
+Emre Hamit Kök, Sedar Gökbulut, Özgür Kaya, Gültekin Kurtar, Serdar Özcan, Fatih Balkan and İsmet
+Yalabık.
+
+And finally very special thanks to a group of people who've taught me real meaning of friendship
+lately. Special thanks to the residents of the most joyful office ever, A-206~: Kerem Hadımlı, Can
+Hoşgör, Okan Akalın, Merve Aydınlılar and Elvan Gülen.}
+%
+% End of Personal and Introductory Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%% !!! This two should be last lines before \begin{document}, do no move them !!!
+\usepackage[pdftex]{hyperref}
+\usepackage[all]{hypcap}
+\begin{document}
+% Preliminaries
+\begin{preliminaries}
+% If you are willing to use any custom stuff before Chapters, put it here
+% Such as List of Abbreviations
+% Check the abbreviations.tex for a template list of abbreviations
+\input{abbreviations.tex}
+% End of Preliminaries
+\end{preliminaries}
+%   
+% Latex content Goes Here 
+% 
+%
+\chapter{Introduction}
+This is the introductory chapter.
+\chapter{Next One}
+This is another chapter. All these chapters can go into seperate .tex files and you can include
+them with \verb|\input{chapter1.tex}|. This is a citation \cite{Sample01}.
+
+%
+% References in Bibtex format goes into below indicated file with .bib extension
+\bibliography{thesis_references}
+% You can use full name of authors, however most likely some of the Bibtex entries you will find, will use abbreviated first names
+% If you don't want to correct each of them by hand, you can use abbreviated style for all of the references
+\bibliographystyle{abbrv}
+\appendix
+\chapter{Proof of Some Theorem}
+This is appendix text.
+%
+% If you are a Ph.D. Student you need to insert a CV at the end of you thesis
+% Check vita.tex for a simple CV template in Latex
+\input{vita.tex}
+\end{document}
