@@ -35,7 +35,7 @@
 %end of margins-etc
 \lineskip 1pt \normallineskip 1pt
 \ifd@uble \def\baselinestretch{2} \else 
-\ifs@ngle \def\baselinestretch{1} \else \def\baselinestretch{1.5} \fi
+\ifs@ngle \def\baselinestretch{1} \else \def\baselinestretch{1.15} \fi
 \fi
 
 \def\@normalsize{\@setsize\normalsize{13.6pt}\xipt\@xipt
