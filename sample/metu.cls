@@ -24,6 +24,12 @@
 \RequirePackage{times}
 \def\@Author{\xcapitalisewords{\MakeLowercase{\expandafter{\@author}}}}
 
+% PDB: Explicitly set page size rather than depending on platform default.
+\pdfpagewidth 210mm
+\pdfpageheight 297mm
+\paperwidth 210mm
+\paperheight 297mm
+
 %default options
 
 %spacing - default double
