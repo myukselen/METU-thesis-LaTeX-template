@@ -18,7 +18,7 @@
 % rel 2019/10/07 changes:
 % added options threejury and fivejury(default) to resolve issue forthesis with 3 jury members.
 
-
+\RequirePackage{lastpage}   % PDB: Needed for reference to number of pages from abstract
 
 % Use Times New Roman
 \RequirePackage{times}

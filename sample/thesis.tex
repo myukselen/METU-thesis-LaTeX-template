@@ -93,7 +93,6 @@
 \documentclass[12pt,oneandhalf,chaparabic,ceng,phd,fivejury]{metu}
 % You can delete next line If your thesis does not have an appendix
 \usepackage{appendix}
-\usepackage{lastpage}
 
 %
 % Use your latex packages here
@@ -307,9 +306,17 @@ Hoşgör, Okan Akalın, Merve Aydınlılar and Elvan Gülen.}
 % End of Personal and Introductory Information
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
-%%% !!! This two should be last lines before \begin{document}, do no move them !!!
+%%% !!! This two and pdfstringDisableCommands should be last lines before \begin{document}, do no move them !!!
 \usepackage[pdftex]{hyperref}
 \usepackage[all]{hypcap}
+
+% PDB: Needed to suppress warning about Token not allowed in PDF string
+\pdfstringdefDisableCommands{%
+	\def\\{}%
+	\def\uppercase#1{<#1>}%
+}
+
+
 \begin{document}
 % Preliminaries
 \begin{preliminaries}
