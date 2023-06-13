@@ -99,13 +99,13 @@ minus3pt\let\@listi\@listI \let\currentsize=\@normalsize}
 	\partopsep \z@ \parsep \z@ \itemsep \z@
 	\ifnum \c@secnumdepth >\m@ne
 		\begin{center}
-		\Large\bf \@chapapp{} \thechapter
+		\large\bf \@chapapp{} \thechapter
 		\end{center}
 		\par
 		\vskip 1.5cm
 	\fi
 	\begin{center}
-	\Large \bf #1
+	\large \bf #1
 	\end{center}
 	\par \nobreak \vskip 2.0cm}
 }
@@ -114,7 +114,7 @@ minus3pt\let\@listi\@listI \let\currentsize=\@normalsize}
 	{\parskip \z@ \topsep \z@
 	\partopsep \z@ \parsep \z@ \itemsep \z@
 	\begin{center}
-	\Large{\bf #1}
+	\large{\bf #1}
 	\end{center}\par
 \nobreak \vskip 1.5cm}}
 

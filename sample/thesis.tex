@@ -1,3 +1,5 @@
+% !TEX program = pdflatex
+% !BIB program = bibtex
 %
 % METU Institute of Natural and Applied Sciences Thesis example 
 %
@@ -90,7 +92,7 @@
 % phd, ms : Degree Received. Ph.D. or M.S. Default is M.S.
 %
 % End of Options
-\documentclass[11pt,oneandhalf,chaparabic,ceng,phd]{metu}
+\documentclass[12pt,oneandhalf,chaparabic,ceng,phd,fivejury]{metu}
 % You can delete next line If your thesis does not have an appendix
 \usepackage{appendix}
 
@@ -128,6 +130,8 @@
 % Default is this month
 %
 \date{April 2012}
+% The date of your thesis defence should be in DD.MM.YYYY format
+\thesisdefencedate{30.04.2012}
 %
 % Approval Page Details
 % --------------------------
@@ -304,9 +308,17 @@ Hoşgör, Okan Akalın, Merve Aydınlılar and Elvan Gülen.}
 % End of Personal and Introductory Information
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
-%%% !!! This two should be last lines before \begin{document}, do no move them !!!
+%%% !!! This two and pdfstringDisableCommands should be last lines before \begin{document}, do no move them !!!
 \usepackage[pdftex]{hyperref}
 \usepackage[all]{hypcap}
+
+% PDB: Needed to suppress warning about Token not allowed in PDF string
+\pdfstringdefDisableCommands{%
+	\def\\{}%
+	\def\uppercase#1{<#1>}%
+}
+
+
 \begin{document}
 % Preliminaries
 \begin{preliminaries}
@@ -320,11 +332,17 @@ Hoşgör, Okan Akalın, Merve Aydınlılar and Elvan Gülen.}
 % Latex content Goes Here 
 % 
 %
+
+% Not sure the need for these commands, but the FBE template includes them:
+\setlength{\parindent}{0em}
+\setlength{\parskip}{10pt}
+
 \chapter{Introduction}
 This is the introductory chapter.
 \chapter{Next One}
 This is another chapter. All these chapters can go into seperate .tex files and you can include
 them with \verb|\input{chapter1.tex}|. This is a citation \cite{Sample01}.
+
 
 %
 % References in Bibtex format goes into below indicated file with .bib extension
