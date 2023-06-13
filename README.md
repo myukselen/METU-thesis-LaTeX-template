@@ -29,6 +29,6 @@ Changes
 
 Credits
 -------
-Utku Erdoğdu
-Güneş Erkan
-@pdb5627
+- Utku Erdoğdu
+- Güneş Erkan
+- @pdb5627
